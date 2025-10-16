@@ -1,0 +1,37 @@
+{
+  "name": "arbitragex-platform",
+  "version": "1.0.0",
+  "description": "DeFi Arbitrage Trading Platform",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "contracts",
+    "arbitrage-bot"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../contracts && npm install && cd ../arbitrage-bot && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:bot": "cd arbitrage-bot && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "compile:contracts": "cd contracts && npm run compile",
+    "test:all": "npm run test:frontend && npm run test:backend && npm run test:contracts",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "test:contracts": "cd contracts && npm test"
+  },
+  "keywords": [
+    "defi",
+    "arbitrage",
+    "trading",
+    "blockchain",
+    "ethereum"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

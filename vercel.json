@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "arbitragex-platform/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "arbitragex-platform/backend/src/serverless.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "arbitragex-platform/backend/src/serverless.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "arbitragex-platform/frontend/dist/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "arbitragex-platform/backend/src/serverless.js": {
+      "maxDuration": 30
+    }
+  }
+}

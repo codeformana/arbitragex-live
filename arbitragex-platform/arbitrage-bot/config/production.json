@@ -1,0 +1,13 @@
+{
+  "bot": {
+    "scanInterval": 2000,
+    "minProfitPercent": 1.0,
+    "maxTradeSize": 50000,
+    "maxConcurrentTrades": 10
+  },
+  "networks": ["ethereum", "polygon", "bsc", "avalanche"],
+  "risk": {
+    "maxDailyLoss": 5000,
+    "maxSlippage": 0.03
+  }
+}

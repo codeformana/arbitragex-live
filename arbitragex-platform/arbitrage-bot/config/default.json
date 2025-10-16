@@ -1,0 +1,20 @@
+{
+  "bot": {
+    "scanInterval": 5000,
+    "minProfitPercent": 0.5,
+    "maxTradeSize": 10000,
+    "maxConcurrentTrades": 3
+  },
+  "networks": ["ethereum", "polygon", "bsc", "avalanche"],
+  "dexes": ["uniswap", "sushiswap", "pancakeswap", "traderjoe"],
+  "tokens": ["ETH", "WBTC", "USDC", "USDT", "DAI"],
+  "risk": {
+    "maxDailyLoss": 1000,
+    "maxSlippage": 0.05,
+    "minLiquidity": 100000
+  },
+  "gas": {
+    "maxGasPrice": 100,
+    "gasPriceMultiplier": 1.2
+  }
+}

@@ -1,0 +1,401 @@
+/* Leaderboard Modern Styles */
+.leaderboard-page-modern {
+  min-height: 100vh;
+  background: #0a0a0f;
+  position: relative;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.leaderboard-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.leaderboard-header .page-title {
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Pool Overview Stats */
+.pool-overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.stat-card-leaderboard {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.stat-card-leaderboard:hover {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.stat-icon {
+  font-size: 40px;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Podium Section */
+.podium-section {
+  margin-bottom: 48px;
+}
+
+.podium-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: end;
+}
+
+.podium-item {
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.podium-item.first {
+  transform: translateY(-20px);
+  border: 2px solid #f59e0b;
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
+}
+
+.podium-item.second {
+  border: 2px solid #94a3b8;
+}
+
+.podium-item.third {
+  border: 2px solid #cd7f32;
+}
+
+.podium-rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rank-medal {
+  font-size: 60px;
+}
+
+.rank-crown {
+  font-size: 60px;
+  color: #f59e0b;
+  animation: float 3s ease-in-out infinite;
+}
+
+.silver-medal {
+  color: #94a3b8;
+}
+
+.bronze-medal {
+  color: #cd7f32;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.podium-rank span {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.8);
+}
+
+.podium-address {
+  font-family: monospace;
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 16px;
+}
+
+.podium-amount {
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.podium-profit {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.podium-roi {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+}
+
+.star-decoration {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #f59e0b;
+  opacity: 0.5;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Leaderboard Table */
+.leaderboard-table-section {
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.leaderboard-table-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table thead {
+  background: rgba(255,255,255,0.05);
+}
+
+.leaderboard-table th {
+  padding: 20px 16px;
+  text-align: left;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.leaderboard-table td {
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.9);
+}
+
+.leaderboard-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.rank-cell {
+  text-align: center;
+  width: 80px;
+}
+
+.rank-icon {
+  font-size: 32px;
+}
+
+.rank-icon.gold {
+  color: #f59e0b;
+  filter: drop-shadow(0 0 10px #f59e0b);
+}
+
+.rank-icon.silver {
+  color: #94a3b8;
+  filter: drop-shadow(0 0 10px #94a3b8);
+}
+
+.rank-icon.bronze {
+  color: #cd7f32;
+  filter: drop-shadow(0 0 10px #cd7f32);
+}
+
+.rank-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+}
+
+.address-cell {
+  font-family: monospace;
+}
+
+.wallet-address {
+  padding: 6px 12px;
+  background: rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  color: #a5b4fc;
+  font-weight: 500;
+}
+
+.amount-cell {
+  font-weight: 600;
+  color: white;
+}
+
+.profit-cell {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.roi-cell {
+  text-align: center;
+}
+
+.roi-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.roi-badge.positive {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10b981;
+}
+
+.trades-cell {
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+}
+
+.date-cell {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+}
+
+/* Join CTA */
+.join-cta {
+  padding: 60px 40px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.join-cta h2 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.join-cta p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 32px;
+}
+
+.btn-large {
+  padding: 18px 48px;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .podium-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .podium-item.first {
+    transform: none;
+    order: -1;
+  }
+  
+  .podium-item.second {
+    order: 0;
+  }
+  
+  .podium-item.third {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .pool-overview-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .leaderboard-header .page-title {
+    font-size: 32px;
+    flex-direction: column;
+  }
+  
+  .leaderboard-table {
+    font-size: 13px;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 12px 8px;
+  }
+  
+  .wallet-address {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pool-overview-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .join-cta h2 {
+    font-size: 28px;
+  }
+  
+  .join-cta p {
+    font-size: 16px;
+  }
+}

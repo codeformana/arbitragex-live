@@ -1,0 +1,250 @@
+.fee-structure-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 100px 20px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  top: -10%;
+  right: -10%;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #ec4899, #f43f5e);
+  bottom: -10%;
+  left: -10%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -30px); }
+}
+
+.fee-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.page-subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.fee-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.fee-card {
+  padding: 40px;
+  text-align: center;
+}
+
+.fee-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 35px;
+}
+
+.fee-icon.success {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.fee-icon.warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}
+
+.fee-card h2 {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.fee-amount {
+  font-size: 56px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+}
+
+.fee-card > p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.example {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.example strong {
+  color: #6366f1;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.example p {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.example .highlight {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.fee-info {
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+.fee-info h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fee-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fee-info li {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fee-info li:last-child {
+  border-bottom: none;
+}
+
+.investment-limits {
+  padding: 40px;
+}
+
+.investment-limits h2 {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.limits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.limit-item {
+  text-align: center;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.limit-item h3 {
+  color: #6366f1;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.limit-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  margin: 15px 0;
+}
+
+.limit-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
+  
+  .fee-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .limits-grid {
+    grid-template-columns: 1fr;
+  }
+}

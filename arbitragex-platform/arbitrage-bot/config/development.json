@@ -1,0 +1,13 @@
+{
+  "bot": {
+    "scanInterval": 3000,
+    "minProfitPercent": 0.3,
+    "maxTradeSize": 5000,
+    "maxConcurrentTrades": 5
+  },
+  "networks": ["ethereum"],
+  "risk": {
+    "maxDailyLoss": 500,
+    "maxSlippage": 0.08
+  }
+}

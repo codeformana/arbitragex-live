@@ -1,0 +1,21 @@
+{
+  "name": "arbitragex-platform",
+  "version": "1.0.0",
+  "description": "ArbitrageX - Real Blockchain Arbitrage Platform",
+  "scripts": {
+    "build": "cd arbitragex-platform/frontend && npm install && npm run build",
+    "dev": "concurrently \"cd arbitragex-platform/backend && npm run dev\" \"cd arbitragex-platform/frontend && npm run dev\"",
+    "start": "cd arbitragex-platform/backend && npm start",
+    "install-all": "cd arbitragex-platform/frontend && npm install && cd ../backend && npm install"
+  },
+  "workspaces": [
+    "arbitragex-platform/frontend",
+    "arbitragex-platform/backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": ["arbitrage", "defi", "blockchain", "trading", "crypto"],
+  "author": "ArbitrageX Team",
+  "license": "MIT"
+}

@@ -1,0 +1,1 @@
+web: cd arbitragex-platform/backend && NODE_ENV=production npm start

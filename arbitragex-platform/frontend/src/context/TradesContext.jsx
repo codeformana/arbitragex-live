@@ -14,7 +14,7 @@ export const useTrades = () => {
 const API_URL = import.meta.env.VITE_API_URL || 
   (window.location.hostname === 'localhost' 
     ? 'http://localhost:5000/api' 
-    : '/api');
+    : 'https://arbitrage-project-q95r8w3hd-rocky-chetrys-projects.vercel.app/api');
 
 // Fetch REAL blockchain trades from backend
 const fetchRealBlockchainTrades = async () => {

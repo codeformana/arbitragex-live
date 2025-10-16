@@ -54,3 +54,4 @@ temp/
 
 # Deployment files (we'll recreate these)
 *.zip
+.vercel
